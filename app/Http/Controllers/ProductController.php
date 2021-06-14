@@ -25,7 +25,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-            return Product::create($request->all());
+        $this->validate($request,[
+            'name' => 'required',
+            'slug' => 'required',
+            'prix' => 'required'
+        ]); 
+
+        return Product::create($request->all());
     }
 
     /**
@@ -36,7 +42,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        return Product::find($id);
     }
 
     /**
@@ -48,7 +54,10 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $product->update($request->all());
+
+        return $product;
     }
 
     /**
@@ -59,6 +68,6 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return Product::destroy($id);
     }
 }
