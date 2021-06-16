@@ -2,6 +2,25 @@
 <head>
     <title>{{ config('app.name') }} | Frontend API's Swagger</title>
     <link href="{{asset('swagger/style.css')}}" rel="stylesheet">
+    <style>
+        html
+        {
+          box-sizing: border-box;
+          overflow: -moz-scrollbars-vertical;
+          overflow-y: scroll;
+        }
+        *,
+        *:before,
+        *:after
+        {
+          box-sizing: inherit;
+        }
+    
+        body {
+          margin:0;
+          background: #fafafa;
+        }
+      </style>
 </head>
 <body>
 <div id="swagger-ui"></div>

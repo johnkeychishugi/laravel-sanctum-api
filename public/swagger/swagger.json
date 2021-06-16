@@ -184,12 +184,60 @@
             "type": "string",
             "description": ""
           },
+           {
+            "name": "email",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
           {
             "name": "password",
             "in": "formData",
             "required": true,
             "type": "string",
             "format": "password",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/logout": {
+      "post": {
+        "description": "Logout the user",
+        "summary": "Logout",
+        "tags": [
+          "All Endpoints"
+        ],
+        "operationId": "logout-admin-shj",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "default": "application/json",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "default": "Bearer ",
+            "type": "string",
             "description": ""
           }
         ],

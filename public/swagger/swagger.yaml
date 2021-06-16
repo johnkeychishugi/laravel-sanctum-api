@@ -45,11 +45,4 @@ paths:
           description: successful operation
         '400':
           description: Bad request
-      security:
-        - api_key: [] 
 
-securityDefinitions:
-  api_key:
-    type: apiKey
-    name: Authorization
-    in: header
