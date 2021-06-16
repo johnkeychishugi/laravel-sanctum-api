@@ -1,0 +1,254 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2.0",
+    "title": "LARAVEL SANCTUM API V1",
+    "description": "This is a private  api",
+    "contact": {}
+  },
+  "host": "localhost:8000",
+  "basePath": "/api",
+  "securityDefinitions": {},
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/register": {
+      "post": {
+        "description": "Makes a post request to signup or register a new user and authenticate the given user once the registration is successful by providing the token",
+        "summary": "Registration",
+        "tags": [
+          "All Endpoints"
+        ],
+        "operationId": "Localhost3000ApiV1AuthSignupPost",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "default": "application/x-www-form-urlencoded",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "key",
+            "in": "header",
+            "required": true,
+            "default": "cYpGnfeUDtRPRXc02wnMbqQCYe7owFiPtk7SzsRRG5hDgxGhrdtAmsocCfG4jvxM8yzHtam0t30ZZV7p8obZOho63yxC3U6QWvhGpdhj7yfTs5D3VZdjAJcIiDrlcHwurMHffOmiK4G76JFgetfWby",
+            "type": "string"
+          },
+          {
+            "name": "app",
+            "in": "header",
+            "required": true,
+            "default": "Admin",
+            "type": "string"
+          },
+          {
+            "name": "nom",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "prenom",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "datenaissance",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "photo",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "id_role",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "description": ""
+          },
+          {
+            "name": "genre",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "carte_identite_recto",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "carte_identite_verso",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "gestionnaire_id",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "formData",
+            "required": false,
+            "type": "string",
+            "description": "",
+            "format": "email"
+          },
+          {
+            "name": "telephone",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "format": "password",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "description": "Login the user",
+        "summary": "Login",
+        "tags": [
+          "All Endpoints"
+        ],
+        "operationId": "SigninPost23-admin-shj",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "default": "application/x-www-form-urlencoded",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "password",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "format": "password",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "description": "Get all products in db",
+        "summary": "Products",
+        "tags": [
+          "All Endpoints"
+        ],
+        "operationId": "getProducts",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": false,
+            "default": "{token}",
+            "type": "string"
+          },
+          {
+            "name": "key",
+            "in": "header",
+            "required": true,
+            "default": "cYpGnfeUDtRPRXc02wnMbqQCYe7owFiPtk7SzsRRG5hDgxGhrdtAmsocCfG4jvxM8yzHtam0t30ZZV7p8obZOho63yxC3U6QWvhGpdhj7yfTs5D3VZdjAJcIiDrlcHwurMHffOmiK4G76JFgetfWby",
+            "type": "string"
+          },
+          {
+            "name": "app",
+            "in": "header",
+            "required": true,
+            "default": "Admin",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "All Endpoints",
+      "description": "all endpoints return objects in JSON format"
+    }
+  ]
+}
