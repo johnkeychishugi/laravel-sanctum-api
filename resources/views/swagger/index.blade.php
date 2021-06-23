@@ -28,7 +28,7 @@
 <script src="{{asset('swagger/swagger-bundle.js')}}"></script>
 <script type="application/javascript">
     const ui = SwaggerUIBundle({
-        url: "{{ asset('swagger/swagger.yaml') }}",
+        url: "{{ asset('swagger/swagger.json') }}",
         dom_id: '#swagger-ui',
     });
 </script>
