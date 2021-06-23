@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2.0",
+    "version": "1.0",
     "title": "LARAVEL SANCTUM API V1",
     "description": "This is a private  api",
     "contact": {}
@@ -45,77 +45,7 @@
             "description": ""
           },
           {
-            "name": "key",
-            "in": "header",
-            "required": true,
-            "default": "cYpGnfeUDtRPRXc02wnMbqQCYe7owFiPtk7SzsRRG5hDgxGhrdtAmsocCfG4jvxM8yzHtam0t30ZZV7p8obZOho63yxC3U6QWvhGpdhj7yfTs5D3VZdjAJcIiDrlcHwurMHffOmiK4G76JFgetfWby",
-            "type": "string"
-          },
-          {
-            "name": "app",
-            "in": "header",
-            "required": true,
-            "default": "Admin",
-            "type": "string"
-          },
-          {
-            "name": "nom",
-            "in": "formData",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "prenom",
-            "in": "formData",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "datenaissance",
-            "in": "formData",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "photo",
-            "in": "formData",
-            "required": false,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "id_role",
-            "in": "formData",
-            "required": true,
-            "type": "integer",
-            "description": ""
-          },
-          {
-            "name": "genre",
-            "in": "formData",
-            "required": false,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "carte_identite_recto",
-            "in": "formData",
-            "required": false,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "carte_identite_verso",
-            "in": "formData",
-            "required": false,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "gestionnaire_id",
+            "name": "name",
             "in": "formData",
             "required": true,
             "type": "string",
@@ -124,20 +54,20 @@
           {
             "name": "email",
             "in": "formData",
-            "required": false,
-            "type": "string",
-            "description": "",
-            "format": "email"
-          },
-          {
-            "name": "telephone",
-            "in": "formData",
             "required": true,
             "type": "string",
             "description": ""
           },
           {
             "name": "password",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "format": "password",
+            "description": ""
+          },
+          {
+            "name": "password_confirmation",
             "in": "formData",
             "required": true,
             "type": "string",
@@ -260,29 +190,6 @@
         "deprecated": false,
         "produces": [
           "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Authorization",
-            "in": "header",
-            "required": false,
-            "default": "{token}",
-            "type": "string"
-          },
-          {
-            "name": "key",
-            "in": "header",
-            "required": true,
-            "default": "cYpGnfeUDtRPRXc02wnMbqQCYe7owFiPtk7SzsRRG5hDgxGhrdtAmsocCfG4jvxM8yzHtam0t30ZZV7p8obZOho63yxC3U6QWvhGpdhj7yfTs5D3VZdjAJcIiDrlcHwurMHffOmiK4G76JFgetfWby",
-            "type": "string"
-          },
-          {
-            "name": "app",
-            "in": "header",
-            "required": true,
-            "default": "Admin",
-            "type": "string"
-          }
         ],
         "responses": {
           "200": {
