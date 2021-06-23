@@ -179,6 +179,75 @@
         }
       }
     },
+    "/products/": {
+      "post": {
+        "description": "Create Product",
+        "summary": "Create Product",
+        "tags": [
+          "All Endpoints"
+        ],
+        "operationId": "createProducts",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "default": "application/x-www-form-urlencoded",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "default": "Bearer ",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "name",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+           {
+            "name": "slug",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "description",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "prix",
+            "in": "formData",
+            "required": true,
+            "type": "int",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
+    },
     "/products": {
       "get": {
         "description": "Get all products in db",
@@ -206,7 +275,7 @@
         "tags": [
           "All Endpoints"
         ],
-        "operationId": "getProducts",
+        "operationId": "getSingleProduct",
         "deprecated": false,
         "produces": [
           "application/json"
