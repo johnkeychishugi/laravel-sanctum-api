@@ -198,7 +198,37 @@
           }
         }
       }
+    },
+    "/products/{id}": {
+      "get": {
+        "description": "Get all products in db",
+        "summary": "Products",
+        "tags": [
+          "All Endpoints"
+        ],
+        "operationId": "getProducts",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters":[
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "default": "0",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
     }
+
   },
   "tags": [
     {
