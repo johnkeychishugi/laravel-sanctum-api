@@ -296,8 +296,44 @@
           }
         }
       }
+    },
+    "/products/{id}/": {
+      "delete": {
+        "description": "Delete a product",
+        "summary": "Delete product",
+        "tags": [
+          "All Endpoints"
+        ],
+        "operationId": "deleteProduct",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters":[
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "default": "Bearer ",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "default": "0",
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        }
+      }
     }
-
   },
   "tags": [
     {
