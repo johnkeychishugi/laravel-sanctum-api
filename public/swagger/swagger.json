@@ -236,7 +236,7 @@
             "name": "prix",
             "in": "formData",
             "required": true,
-            "type": "int",
+            "type": "integer",
             "description": ""
           }
         ],
