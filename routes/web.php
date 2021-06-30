@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('/api/api-docs', function () {
     return view('swagger.index');
-});
+})->name('docs');
