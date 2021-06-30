@@ -20,10 +20,23 @@
             }
             a, h1 {
                 color: white;
-            },
-            a{
-                /* text-align: center!important; */
-                border: 2px solid red;
+            }
+            h1{
+                font-size: 45px;
+            }
+            .docs{
+               text-align: center;
+            }
+            .docs a {
+                border: 2px solid rgba(50, 88, 211, 0.356);
+                padding: 10px;
+                border-radius: 20px
+            }
+            
+            .docs a:hover{
+                color: #1B212C;
+                background-color: white;
+                border: none;
             }
         </style>
     </head>
@@ -33,7 +46,9 @@
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <h1>Laravel Santum API</h1>
                 </div>
-                <a  href="{{ route('docs') }}">Swagger's Documentation API</a>
+                <div class="docs">
+                    <a href="{{ route('docs') }}">Swagger's Documentation</a>
+                </div>
             </div>
         </div>
     </body>
