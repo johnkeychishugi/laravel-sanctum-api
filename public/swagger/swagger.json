@@ -6,7 +6,7 @@
     "description": "This is a private  api",
     "contact": {}
   },
-  "host": "localhost:8000",
+  "host": "localhost:8002",
   "basePath": "/api",
   "securityDefinitions": {},
   "schemes": [
